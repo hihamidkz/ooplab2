@@ -16,6 +16,20 @@ struct listnode *node_add(struct listnode *list, int value) {
 	return node;
 }
 
+struct stack *create_stack(int value)
+{
+	struct stack *s;
+
+	s = new struct stack;
+
+	if (s != NULL) {
+		s->top->value = value;
+		s->top->next = NULL;
+		s->size = 0;
+	}
+	return s;
+}
+
 struct stack *stack_push(struct stack *s, int value)
 {
 	if (s == NULL) {

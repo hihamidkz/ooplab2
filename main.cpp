@@ -5,29 +5,9 @@
 #include "list.h"
 #include "qstack.h"
 
-struct stack {
-	int size;
-
-	struct listnode *top;
-};
-
 typedef unsigned char byte;
 
 using namespace std;
-
-struct stack *create_stack(int value)
-{
-	struct stack *s;
-
-	s = (struct stack*)malloc(sizeof(struct stack));
-
-	if (s != NULL) {
-		s->top->value = value;
-		s->top->next = NULL;
-		s->size = 0;
-	}
-	return s;
-}
 
 int main()
 {
